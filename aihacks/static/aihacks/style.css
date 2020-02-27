@@ -1,8 +1,16 @@
 body{
     background-image: url('./picture.jpeg');
     background-size:50vw;
+ 
 
 }
 .cardy{
     height:90vh;
+}
+
+@media(max-width:768px){
+    body{
+        background-size: contain;
+    }
+   
 }
