@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'aihacks/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="row valign-wrapper cardy">
+        <div class="col s12 col m6  offset-m3 ">
+            <div class="card  blue-grey darken-4">
+                <div class="card-content white-text">
+                   
+                    <p><Strong>Your code is {{code.Verification_Code}}</Strong></p>
+                    
+                   
+
+                </div>
+               
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
