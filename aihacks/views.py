@@ -23,7 +23,7 @@ def code(request):
    space = Detail.objects.filter(Q(Email='') | Q(Email__isnull = True))
    if(len(existing)==0 and len(space)>0):
         space[0].Email = email
-        space[0].Attendee_Attendee_University_Name = school
+        space[0].Attendee_University_Name = school
         space[0].Attendee_First_Name = name 
         space[0].save()
         print('this is ' + space[0].Verification_Code)
@@ -35,7 +35,7 @@ def code(request):
         print('existing')
         print('this is ' + existing[0].Attendee_First_Name)
         print('this is ' + existing[0].Email)
-        print('this is ' + existing[0].Attendee_University_Name)
+        print( existing[0].Attendee_University_Name)
         print('this is ' + existing[0].Verification_Code)
         return render(request,'aihacks/check.html',{'code':existing[0]})
    else:
