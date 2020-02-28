@@ -19,7 +19,7 @@ def code(request):
    school = request.POST['school']
    email = request.POST['email']
    existing = Detail.objects.filter(Email=email)
-   space = Detail.objects.filter(Email='')
+   space = Detail.objects.filter(Email='').filter(Email__isnull = True)
    if(len(existing)==0 and len(space)>0):
         space[0].Email = email
         space[0].Attendee_Attendee_University_Name = school
