@@ -1,5 +1,6 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.http import Http404
+from django.db.models import Q
 from .models import Detail
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
@@ -19,7 +20,7 @@ def code(request):
    school = request.POST['school']
    email = request.POST['email']
    existing = Detail.objects.filter(Email=email)
-   space = Detail.objects.filter(Email='').filter(Email__isnull = True)
+   space = Detail.objects.filter(Q(Email='') | Q(Email__isnull = True))
    if(len(existing)==0 and len(space)>0):
         space[0].Email = email
         space[0].Attendee_Attendee_University_Name = school
