@@ -26,20 +26,13 @@ def code(request):
         space[0].Attendee_University_Name = school
         space[0].Attendee_First_Name = name 
         space[0].save()
-        print('this is ' + space[0].Verification_Code)
-        print('this is ' + space[0].Attendee_First_Name)
-        print('this is ' + space[0].Email)
-        print('registered')
+        
         return render(request,'aihacks/check.html',{'code':space[0]})
    elif len(existing)==1:
-        print('existing')
-        print('this is ' + existing[0].Attendee_First_Name)
-        print('this is ' + existing[0].Email)
-        print( existing[0].Attendee_University_Name)
-        print('this is ' + existing[0].Verification_Code)
+        
         return render(request,'aihacks/check.html',{'code':existing[0]})
    else:
-        print('out of pin')
+        
         return render(request,'aihacks/check.html',{'code':'Not available'})
    
 

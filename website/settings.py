@@ -80,8 +80,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'aihacks',
-        'USER': 'samson2ky@exceldb',
-        'PASSWORD': 'Sam888888',
+        'USER': 'your username',
+        'PASSWORD': 'your password',
         'HOST': 'exceldb.mysql.database.azure.com',
         'PORT': '3306',
         'OPTIONS':{'ssl':True}

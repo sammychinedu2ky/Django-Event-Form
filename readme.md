@@ -1,1 +1,1 @@
-## This was developed for an AI gaming event I co-organized to helped give students verfication pins to the azure for students account.
+## This web app was developed for an AI gaming event I co-organized to help give students verfication pins to access the azure for students account.
